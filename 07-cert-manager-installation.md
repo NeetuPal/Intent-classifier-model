@@ -6,3 +6,10 @@ Cert-Manager automates the issuance and renewal of TLS certificates within the K
 ```bash
 helm repo add jetstack [https://charts.jetstack.io](https://charts.jetstack.io)
 helm repo update
+
+```bash
+helm install cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --create-namespace \
+  --version v1.13.0 \
+  --set installCRDs=true
