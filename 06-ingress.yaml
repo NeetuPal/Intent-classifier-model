@@ -4,9 +4,14 @@ metadata:
   name: intent-classifier-ingress
   namespace: intent-namespace
   annotations:
+    cert-manager.io/issuer: "local-issuer" # If you use Cert-Manager
     kubernetes.io/ingress.class: traefik
 spec:
   ingressClassName: traefik
+  tls:
+    - hosts:
+        - mydemoproject.site
+      secretName: intent-classifier-tls # Cert-manager will create this
   rules:
     - host: mydemoproject.site
       http:
