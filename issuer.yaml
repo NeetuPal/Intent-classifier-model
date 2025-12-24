@@ -1,0 +1,7 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: local-issuer
+  namespace: intent-namespace
+spec:
+  selfSigned: {} # This tells it to sign its own certificates
