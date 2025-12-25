@@ -42,7 +42,7 @@ spec:
     model:
       modelFormat:
         name: sklearn
-      storageUri: "gs://kfserving-samples/models/sklearn/1.0/model" #"<downloadable location>"
+      storageUri: "gs://kfserving-samples/models/sklearn/1.0/model" # "<downloadable location>"
       resources:
         requests:
           cpu: "100m"
